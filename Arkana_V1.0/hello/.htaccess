@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^arkanacoworking.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.arkanacoworking.com$
+RewriteRule (.*)$ http://www.arkanacoworking.com/$1 [R=301,L]

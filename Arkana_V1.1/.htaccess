@@ -1,0 +1,14 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+ErrorDocument 404 /index.php
+
+RewriteRule ^(.*)/$ index.php [L,QSA]
+RewriteRule ^inicio$    index.php [L,QSA]
+RewriteRule ^contactanos$    index.php?id=2 [L,QSA]
+RewriteRule ^envioExitoso$    index.php?id=2&mensaje=1 [L,QSA]
+RewriteRule ^envioError$    index.php?id=2&mensaje=0 [L,QSA]
+RewriteRule ^sedes$    index.php?id=1&img=porta.gif&tit=Nuestras_Sedes [L,QSA]
+RewriteRule ^inaguracion$    index.php?id=1&img=PortaNova.jpg&tit=Inaguración [L,QSA]
